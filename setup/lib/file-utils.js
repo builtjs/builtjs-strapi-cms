@@ -29,7 +29,7 @@ module.exports = {
   },
   getFileData: function (fileName) {
     return new Promise(async (resolve) => {
-      let url = `https://raw.githubusercontent.com/builtjs/builtjs-theme-windy/main/public/images/${fileName}`;
+      let url = `<RAW_REPO_URL>${fileName}`;
       let filePath = "../../.data/uploads";
       const fullPath = path.resolve(__dirname, filePath, fileName);
       await downloadImage(url, fullPath);

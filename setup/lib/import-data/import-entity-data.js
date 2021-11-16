@@ -7,7 +7,7 @@ async function importEntityData(strapi) {
   for (let i = 0; i < entities.length; i++) {
     const entity = entities[i];
     const files = await fileUtils.getFilesData(entity.files);
-    await createEntry(strapi, entity.collectionName, entity.attributes, files);
+    await createEntry(strapi, entity.collectionName, entity.data, files);
   }
 }
 
