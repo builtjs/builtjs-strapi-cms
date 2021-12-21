@@ -32,7 +32,8 @@ module.exports = {
       }
       let filePath = "../../.data/uploads";
       const fullPath = path.resolve(__dirname, filePath);
-      const imagePath = `${file.path}/${file.name}.${file.format}`;
+      const fileName = `${file.name}.${file.format}`;
+      const imagePath = `${file.path}/${fileName}`;
       if (!fs.existsSync(fullPath + imagePath)) {
         fsp.mkdir(fullPath + file.path, { recursive: true });
       }
@@ -42,7 +43,7 @@ module.exports = {
       const mimeType = `image/${file.format === "svg" ? "svg+xml" : file.format}`;
       resolve({
         path: `./.data/uploads${imagePath}`,
-        name: file.name,
+        name: fileName,
         size,
         type: mimeType,
       });
