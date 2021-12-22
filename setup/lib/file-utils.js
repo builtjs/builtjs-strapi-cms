@@ -27,12 +27,12 @@ module.exports = {
   },
   getFileData: function (file) {
     return new Promise(async (resolve) => {
-      if(!file.path || !file.format || !file.name){
+      if(!file.path || !file.ext || !file.name){
         resolve(null);
       }
       let filePath = "../../.data/uploads";
       const fullPath = path.resolve(__dirname, filePath);
-      const fileName = `${file.name}.${file.format}`;
+      const fileName = `${file.name}.${file.ext}`;
       const imagePath = `${file.path}/${fileName}`;
       if (!fs.existsSync(fullPath + imagePath)) {
         fsp.mkdir(fullPath + file.path, { recursive: true });
@@ -40,7 +40,7 @@ module.exports = {
       let url = `<RAW_REPO_URL>${imagePath}`;    
       await downloadImage(url, fullPath + imagePath);
       const size = await this.getFileSizeInBytes(fullPath);
-      const mimeType = `image/${file.format === "svg" ? "svg+xml" : file.format}`;
+      const mimeType = `image/${file.ext === "svg" ? "svg+xml" : file.ext}`;
       resolve({
         path: `./.data/uploads${imagePath}`,
         name: fileName,
