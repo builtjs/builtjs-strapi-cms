@@ -10,7 +10,7 @@ async function importPageData(strapi) {
     const pageData = pages[i];
     for (let i = 0; i < pageData.data.contentSections.length; i++) {
       const contentSection = pageData.data.contentSections[i];
-      pageData.data.contentSections[i] = await uploadComponentFiles(
+      pageData.data.contentSections[i] = await uploadElementFiles(
         contentSection,
         pageData,
         i
@@ -20,7 +20,7 @@ async function importPageData(strapi) {
     await createEntry(strapi, pageData.collectionName, pageData.data, files);
   }
 
-  async function uploadComponentFiles(obj, pageData, index) {
+  async function uploadElementFiles(obj, pageData, index) {
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         let attributeName = `contentSections.${index}.${prop}`;
@@ -29,7 +29,7 @@ async function importPageData(strapi) {
           pageData.files.elements &&
           pageData.files.elements[attributeName]
         ) {
-          let componentFilesData = obj[prop];
+          let elementFilesData = obj[prop];
           for (var fileProp in pageData.files.elements[attributeName]) {
             if (pageData.files.elements[attributeName].hasOwnProperty(fileProp)) {
               let fileData = pageData.files.elements[attributeName][fileProp];
@@ -44,12 +44,12 @@ async function importPageData(strapi) {
                 data: {},
                 files: files,
               });
-              if (Array.isArray(componentFilesData)) {
-                for (let i = 0; i < componentFilesData.length; i++) {
-                  componentFilesData[i][fileProp] = uploads[i].id;
+              if (Array.isArray(elementFilesData)) {
+                for (let i = 0; i < elementFilesData.length; i++) {
+                  elementFilesData[i][fileProp] = uploads[i].id;
                 }
               } else {
-                componentFilesData[fileProp] = uploads[0].id;
+                elementFilesData[fileProp] = uploads[0].id;
               }
             }
           }
