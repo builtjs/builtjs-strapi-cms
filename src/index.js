@@ -1,4 +1,5 @@
 'use strict';
+const setup = require('./../lib');
 
 module.exports = {
   /**
@@ -16,5 +17,34 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({ strapi }) {
+    (async() => {
+      // const shouldImportSeedData = await setup.isFirstRun(strapi);
+      // if (shouldImportSeedData) {
+        try {
+          await setup.importData(strapi);
+        } catch (error) {
+          console.log('Could not import seed data');
+          console.error(error);
+        }
+      // }
+    })()
+   
+  },
 };
+
+
+// const setup = require('./../lib');
+
+// module.exports = async () => {
+//   console.log('...........setup.................');
+//   // const shouldImportSeedData = await setup.isFirstRun(strapi);
+//   // if (shouldImportSeedData) {
+//   //   try {
+//   //     await setup.importData(strapi);
+//   //   } catch (error) {
+//   //     console.log('Could not import seed data');
+//   //     console.error(error);
+//   //   }
+//   // } 
+// };
