@@ -1,0 +1,1 @@
+{"collectionName":"components_elements_button_link","info":{"displayName":"Button Link","icon":"heading"},"options":{"increments":true,"timestamps":true,"draftAndPublish":true},"attributes":{"label":{"type":"string"},"url":{"type":"string"},"type":{"type":"string"}}}

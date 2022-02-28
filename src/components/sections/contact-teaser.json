@@ -1,0 +1,1 @@
+{"collectionName":"components_sections_contact_teaser","info":{"displayName":"Contact Teaser","icon":"heading"},"attributes":{"preheading":{"type":"component","repeatable":false,"component":"elements.preheading"},"heading":{"type":"string"},"buttonLinks":{"type":"component","repeatable":true,"component":"elements.button-link"}},"variants":{"backgroundColor":"darkest"}}

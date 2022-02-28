@@ -1,0 +1,1 @@
+{"collectionName":"components_seo_blog_seo","info":{"displayName":"Blog Page SEO","icon":"robot"},"attributes":{"title":{"type":"string"},"description":{"type":"text"},"shareImage":{"allowedTypes":["images"],"type":"media","multiple":false,"required":false},"twitterCardType":{"type":"string"},"twitterUsername":{"type":"string"}}}

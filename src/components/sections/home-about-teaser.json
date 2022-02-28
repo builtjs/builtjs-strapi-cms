@@ -1,0 +1,1 @@
+{"collectionName":"components_sections_home_about_teaser","info":{"displayName":"About Teaser","icon":"heading"},"attributes":{"preheading":{"type":"component","repeatable":false,"component":"elements.preheading"},"heading":{"type":"string"},"blurb1":{"type":"text"},"blurb2":{"type":"text"},"buttonLinks":{"type":"component","repeatable":true,"component":"elements.button-link"}}}

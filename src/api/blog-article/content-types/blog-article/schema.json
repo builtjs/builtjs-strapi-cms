@@ -1,0 +1,1 @@
+{"kind":"singleType","collectionName":"blog_article","info":{"singularName":"blog-article","pluralName":"blog-articles","displayName":"Blog Article"},"options":{"draftAndPublish":true},"pluginOptions":{},"attributes":{"contentSections":{"type":"dynamiczone","components":["sections.blog-article","sections.blog-related-articles"]}}}

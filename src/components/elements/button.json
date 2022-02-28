@@ -1,0 +1,1 @@
+{"collectionName":"components_elements_button","info":{"displayName":"Button","icon":"heading"},"options":{"increments":true,"timestamps":true,"draftAndPublish":true},"attributes":{"label":{"type":"string"},"type":{"type":"string"}}}
