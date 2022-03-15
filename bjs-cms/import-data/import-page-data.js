@@ -1,6 +1,6 @@
 const createEntry = require("../create-entry");
 const fileUtils = require("../file-utils");
-const { pages } = require("./../../.data/data.json");
+const { pages } = require("../../.data/data.json");
 
 async function importPageData(strapi) {
   if (!pages) {

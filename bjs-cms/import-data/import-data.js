@@ -2,9 +2,9 @@ const importPageData = require('./import-page-data');
 const importEntityData = require('./import-entity-data');
 const importLayoutData = require('./import-layout-data');
 const importGlobalData = require('./import-global-data');
-const setPublicPermissions = require('./../set-public-permissions');
+const setPublicPermissions = require('../set-public-permissions');
 
-const permissions = require('./../../.data/permissions');
+const permissions = require('../../.data/permissions');
 
 async function importData(strapi) {
     // Allow read of application content types

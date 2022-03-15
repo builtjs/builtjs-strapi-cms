@@ -1,0 +1,8 @@
+{
+  "name": "bjs-cms",
+  "version": "1.0.0",
+  "description": "Built.JS library for Strapi CMS projects.",
+  "main": "index.js",
+  "author": "Richard Lovell",
+  "license": "MIT"
+}

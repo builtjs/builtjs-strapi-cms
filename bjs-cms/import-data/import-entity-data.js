@@ -1,7 +1,7 @@
 const setup = require("..");
 const createEntry = require("../create-entry");
 const fileUtils = require("../file-utils");
-const { entities } = require("./../../.data/data.json");
+const { entities } = require("../../.data/data.json");
 
 async function importEntityData(strapi) {
   if(!entities){

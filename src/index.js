@@ -1,5 +1,5 @@
 'use strict';
-const setup = require('./../lib');
+const {importData, isFirstRun} = require('bjs-cms');
 
 module.exports = {
   /**
@@ -19,15 +19,15 @@ module.exports = {
    */
   bootstrap({ strapi }) {
     (async() => {
-      // const shouldImportSeedData = await setup.isFirstRun(strapi);
-      // if (shouldImportSeedData) {
+      const shouldImportSeedData = await isFirstRun(strapi);
+      if (shouldImportSeedData) {
         try {
-          await setup.importData(strapi);
+          await importData(strapi);
         } catch (error) {
           console.log('Could not import seed data');
           console.error(error);
         }
-      // }
+      }
     })()
    
   },
