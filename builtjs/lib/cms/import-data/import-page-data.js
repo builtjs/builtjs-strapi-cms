@@ -1,6 +1,19 @@
 const createEntry = require("../create-entry");
 const fileUtils = require("../file-utils");
-const { pages } = require("../../.data/data.json");
+const { pages } = require("../../../../.data/data.json");
+// try {
+//   pageSettings = require("@/data/pages.json");
+//   layoutSettings = require("@/data/layout.json");
+// } catch (e) {
+//   if (e.code !== "MODULE_NOT_FOUND") {
+//     // Re-throw not "Module not found" errors
+//     throw e;
+//   }
+//   if (e.message.indexOf("'express'") === -1) {
+//     // Re-throw not found errors for other modules
+//     throw e;
+//   }
+//}
 
 async function importPageData(strapi) {
   if (!pages) {

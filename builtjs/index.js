@@ -1,5 +1,5 @@
 /** !
- * @fileOverview A Built.JS Javascript library for Strapi CMS projects.
+ * @fileOverview A Javascript library for Built.JS Themes.
  * @version 0.1.0
  * @license
  * Copyright (c) 2022 Richard Lovell
@@ -22,10 +22,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
- (function () {
+(function () {
   "use strict";
-  const isFirstRun = require("./is-first-run");
-  const importData = require("./import-data/import-data");
-  
-  module.exports = { isFirstRun, importData };
+ 
+  const { 
+    getPaths, 
+    getProps 
+  } = require("./lib/site/api");
+
+  const { 
+    importData, 
+    isFirstRun
+  } = require("./lib/cms/api");
+
+  module.exports = {
+    getPaths,
+    getProps,
+    importData, 
+    isFirstRun
+  };
 })();
