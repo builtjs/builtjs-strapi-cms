@@ -25,10 +25,10 @@
 (function () {
   "use strict";
  
-  const { 
-    getPaths, 
-    getProps 
-  } = require("./lib/site/api");
+  // const { 
+  //   getPaths, 
+  //   getProps 
+  // } = require("./lib/site/api");
 
   const { 
     importData, 
@@ -36,8 +36,6 @@
   } = require("./lib/cms/api");
 
   module.exports = {
-    getPaths,
-    getProps,
     importData, 
     isFirstRun
   };
