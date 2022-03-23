@@ -19,7 +19,8 @@ module.exports = {
    */
   bootstrap({ strapi }) {
     (async() => {
-      const shouldImportSeedData = await isFirstRun(strapi);
+      const shouldImportSeedData =
+        process.env.IS_SETUP_DATA || await isFirstRun(strapi);
       if (shouldImportSeedData) {
         try {
           await importData(strapi);
