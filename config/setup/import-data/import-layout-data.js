@@ -1,7 +1,7 @@
 const setup = require("../api");
 const createEntry = require("../create-entry");
 const fileUtils = require("../file-utils");
-const { layout } = require("../../../../.data/data.json");
+const { layout } = require("../../../.data/data.json");
 
 async function importLayoutData(strapi) {
   if (!layout) {

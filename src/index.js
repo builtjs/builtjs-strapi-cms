@@ -1,5 +1,5 @@
 'use strict';
-const {importData, isFirstRun} = require('bjs-cms');
+const {importData, isFirstRun} = require('./../config/setup/api');
 
 module.exports = {
   /**

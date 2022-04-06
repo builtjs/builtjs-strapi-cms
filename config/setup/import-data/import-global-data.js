@@ -1,7 +1,7 @@
 const setup = require("../api");
 const createEntry = require("../create-entry");
 const fileUtils = require("../file-utils");
-const { global } = require("../../../../.data/data.json");
+const { global } = require("../../../.data/data.json");
 
 async function importGlobalData(strapi) {
   if (!global) {

@@ -32,7 +32,7 @@ module.exports = {
       }
       let attributes = file.data.attributes;
       let uploadsPath = ".data/uploads";
-      let filePath = `./../${uploadsPath}`;
+      let filePath = `./../../${uploadsPath}`;
       const fullPath = path.resolve(__dirname, filePath);
       const fileName = `${attributes.name}.${attributes.ext}`;
       const imagePath = `${attributes.path}/${fileName}`;

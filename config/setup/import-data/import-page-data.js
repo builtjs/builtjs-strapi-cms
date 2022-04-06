@@ -1,6 +1,6 @@
 const createEntry = require("../create-entry");
 const fileUtils = require("../file-utils");
-const { pages } = require("../../../../.data/data.json");
+const { pages } = require("../../../.data/data.json");
 // try {
 //   pageSettings = require("@/data/pages.json");
 //   layoutSettings = require("@/data/layout.json");
