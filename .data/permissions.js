@@ -1,2 +1,2 @@
-const permissions = {"primary-menu-item":["find","findOne"],"primary-menu-items":["find","findOne"],"social-link":["find","findOne"],"social-links":["find","findOne"],"global":["find","findOne"],"layout":["find","findOne"],"home":["find","findOne"],"contact":["find","findOne"]};
+const permissions = {"global":["find","findOne"],"layout":["find","findOne"],"greeting":["find","findOne"],"greetings":["find","findOne"],"home":["find","findOne"]};
   module.exports = permissions;
