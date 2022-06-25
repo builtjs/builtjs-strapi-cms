@@ -2,28 +2,27 @@
   "name": "builtjs-strapi-cms",
   "private": true,
   "version": "0.1.0",
-  "description": "A Built.JS Strapi application",
+  "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.0.2",
-    "@strapi/plugin-users-permissions": "4.0.2",
-    "@strapi/strapi": "^4.2.0",
+    "@strapi/strapi": "4.2.0",
+    "@strapi/plugin-users-permissions": "4.2.0",
+    "@strapi/plugin-i18n": "4.2.0",
     "axios": "^0.21.1",
-    "lodash.set": "^4.3.2",
-    "pg": "^8.7.3",
-    "pg-connection-string": "^2.5.0",
-    "sqlite3": "^5.0.8"
+    "better-sqlite3": "7.4.6",
+    "lodash.set": "^4.3.2"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "780e4dc3-45f1-4550-9e38-b19848ea4c87"
+    "uuid": "50121b56-3e0e-4cc6-af89-28d3b5a47b59"
   },
   "engines": {
     "node": ">=12.x.x",
