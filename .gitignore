@@ -95,6 +95,9 @@ results
 node_modules
 .node_history
 
+# package-lock.json may cause issues on Heroku
+package-lock.json
+
 ############################
 # Tests
 ############################
@@ -112,3 +115,4 @@ exports
 *.cache
 build
 .strapi-updater.json
+
